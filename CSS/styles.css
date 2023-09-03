@@ -95,3 +95,43 @@ body {
     border-radius: 50%;
     width: 35px;
 }
+
+
+/* -----FOOTER----- */
+.footer {
+    color: rgb(82, 81, 81);
+    flex-direction: row;
+    margin: 0px 20px;
+    justify-content: space-between;
+}
+
+@media (max-width: 420px) {
+    .footer {
+        font-size: 10px;
+        flex-direction: column;
+    }
+    .name {
+        margin-top: 0px;
+    }
+}
+
+/* lista ul */
+.opciones {
+    flex-direction: row;
+    list-style: none;
+    padding: 0px;
+    margin-top: 0px;
+}
+
+ /* li */
+.footer-li {
+    margin: 10px 0px;
+}
+
+.ft-margin{
+    margin-top: 15px;
+}
+
+.footer-single {
+    color: rgb(82, 81, 81);
+} 
