@@ -1,0 +1,97 @@
+body {
+    color: white;
+    background-color: rgb(16, 16, 16);
+    margin: 0px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* sacarle el estilo predeterminado a los links */
+.nostyle {
+    text-decoration: none;
+    color: white;
+}
+
+/* propiedades flex generales */
+.flex {
+    display: flex;
+}
+
+/* -------- BARRA DE NAVEGACION -------- */
+.header {
+    height: 85px;
+    width: 100vw;
+    justify-content: space-between;
+    position: fixed;
+}
+
+@media (max-width: 420px) {
+    .header {
+        height: 50px;
+        margin-top: 10px;
+    }
+}
+
+/* items dentro de la barra de navegacion */
+
+.logo {
+    height: 60px;
+    margin: 0px 40px;
+}
+
+@media (max-width: 420px) {
+    .logo {
+        display: none;
+    }
+}
+
+.nav-left {
+    padding: 0px;
+    align-items: center;
+    flex-direction: row;
+    list-style: none;
+}
+
+.nav-single {
+    margin: 20px;
+    font-size: 15px;
+}
+
+@media (max-width: 420px) {
+    .nav-single {
+        margin: 15px;
+        margin-left: 20px;
+        font-size: 10px;
+    }
+}
+
+.nav-right {
+    flex-direction: row;
+    align-items: center;
+    margin-right: 70px;
+}
+
+@media ((max-width: 420px)) {
+    .nav-right, .profile {
+        justify-self: flex-end;
+        margin-right: 20px;
+    }
+}
+
+.sbar {
+    margin-right: 25px;
+}
+
+@media (max-width: 420px) {
+    .sbar {
+        display: none;
+    }
+}
+
+.button {
+    margin-left: 2px;
+}
+
+.profile {
+    border-radius: 50%;
+    width: 35px;
+}
