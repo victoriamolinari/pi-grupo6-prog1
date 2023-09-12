@@ -320,13 +320,16 @@ body {
     color: rgb(82, 81, 81);
 }
 
-/* -------- DETALLE -------- */
-.pelicula {
+/* -------- DETALLE PELICULA Y SERIE-------- */
+.pelicula,
+.serie {
     padding: 15px;
-    justify-content: center;
+    justify-content: center; /*ahora me deja sin align, chequear antes de entregar*/
+    
 }
 
-.section-pelicula {
+.section-pelicula,
+.section-serie {
     width: 50vw;
     background-color: rgb(23, 23, 23);
     padding: 10px;
@@ -334,7 +337,8 @@ body {
     justify-content: center;
 }
 
-.imagen-pelicula{
+.imagen-pelicula,
+.imagen-serie{
     width: 100%;
     margin-top: 20px;
 }
@@ -358,15 +362,18 @@ body {
 
 
 @media (max-width: 420px ) {
-    .pelicula {
+    .pelicula,
+    .serie {
         margin: 0px;
         width: 100%;
     }
-    .section-pelicula{
+    .section-pelicula,
+    .section-serie{
         width: 90vw;
         justify-content: center;
     }
-    .imagen-pelicula{
+    .imagen-pelicula,
+    .imagen-serie{
         width: 100%;
     }
     .text{

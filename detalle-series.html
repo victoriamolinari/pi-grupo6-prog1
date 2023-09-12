@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./CSS/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <title>Series</title>
 </head>
 
@@ -14,21 +15,20 @@
             <a href="./index.html" class="flex">
                 <img src="./img/logo.png" alt="Logo" class="logo">
             </a>
-        </section>
 
-        <nav class="flex">
-            <ul class="flex nav-left">
-                <li class="nav-single"><a href="./index.html" class="nostyle">Home</a></li>
-                <li class="nav-single"><a href="./peliculas.html" class="nostyle">Peliculas</a></li>
-                <li class="nav-single"><a href="./series.html" class="nostyle">Series</a></li>
-                <li class="nav-single"><a href="./favoritos.html" class="nostyle">Favoritos</a></li>
-            </ul>
-        </nav>
+            <nav class="flex">
+                <ul class="flex nav-left">
+                    <li class="nav-single"><a href="./index.html" class="nostyle">Home</a></li>
+                    <li class="nav-single"><a href="./genero.html" class="nostyle">Géneros</a></li>
+                    <li class="nav-single"><a href="./favoritos.html" class="nostyle">Favoritos</a></li>
+                </ul>
+            </nav>
+        </section>
 
         <section class="flex nav-right">
             <div class="sbar"> <!-- div? -->
-                <form>
-                    <input type="text" placeholder=" Buscar">
+                <form action="results.html" method="get">
+                    <input type="text" placeholder=" Buscar" id="buscar" name="buscar" value=""> <!-- id? -->
                     <button type="submit" class="button">-</button>
                 </form>
             </div>
@@ -38,9 +38,23 @@
                 </a>
             </div>
         </section>
-
     </header>
 
+    <main class="flex serie">
+        <section class="flex section-serie">
+            <img class="imagen-serie" src="./img/un-cuento-perfecto.jpg" alt="serie">
+            <h1 class="text">UN CUENTO PERFECTO</h1>
+            <ul class="flex icons">
+                <li><i class="awesome fa-solid fa-play"></i></li>
+                <li><i class="awesome fa-regular fa-heart"></i></li>
+                <li><i class="awesome fa-regular fa-star"></i></li>
+            </ul>
+            <p class="text info">2023 Miniserie</p>
+            <p class="text info"> Género: Series basadas en libros</p>
+            <p class="text">Margot huye de su propia boda y se siente a la deriva. Lo que no sabe es que David y su
+                encantador caos pueden ayudarla a encontrar el camino</p>
+        </section>
+    </main>
 
     <footer class="flex footer">
         <section class="ft-margin">
