@@ -135,3 +135,62 @@ body {
 .footer-single {
     color: rgb(82, 81, 81);
 } 
+/* NUEVO HTML DE LA DESCRIPCION DE LA PELICULA*/
+.pelicula {
+    padding: 15px;
+    justify-content: center;
+}
+
+.section-pelicula {
+    width: 50vw;
+    background-color: rgb(23, 23, 23);
+    padding: 10px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.imagen-pelicula{
+    width: 100%;
+    margin-top: 20px;
+}
+.icons{
+    list-style: none;
+    flex-direction: row;
+    color: white;
+    margin: 5px;
+    padding: 0%;
+    justify-content: flex-start;   
+}
+.awesome{
+    padding-right: 20px;
+}
+
+
+.info{
+    list-style: none;
+    margin: 10px 0px;
+}
+
+
+@media (max-width: 420px ) {
+    .pelicula {
+        margin: 0px;
+        width: 100%;
+    }
+    .section-pelicula{
+        width: 90vw;
+        justify-content: center;
+    }
+    .imagen-pelicula{
+        width: 100%;
+    }
+    .text{
+        font-size: 15px;
+    }
+    /*agregado media querie de header*/
+     .header {
+        height: 50px;
+        margin-top: 10px;
+        }
+    
+}
