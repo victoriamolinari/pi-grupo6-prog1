@@ -3,6 +3,7 @@ body {
     background-color: rgb(16, 16, 16);
     margin: 0px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
 }
 
 /* sacarle el estilo predeterminado a los links */
@@ -21,13 +22,14 @@ body {
     height: 85px;
     width: 100vw;
     justify-content: space-between;
-    position: fixed;
 }
 
 @media (max-width: 420px) {
     .header {
         height: 50px;
-        margin-top: 10px;
+        width: 100vw;
+        margin: 10px 20px 0px 0px;
+        justify-content: center;
     }
 }
 
@@ -67,13 +69,13 @@ body {
 .nav-right {
     flex-direction: row;
     align-items: center;
-    margin-right: 70px;
+    margin-right: 45px;
 }
 
 @media ((max-width: 420px)) {
-    .nav-right, .profile {
-        justify-self: flex-end;
-        margin-right: 20px;
+    .nav-right, .profile div {
+        margin-left: 40px;
+        margin-right: 5px;
     }
 }
 
@@ -96,19 +98,183 @@ body {
     width: 35px;
 }
 
+/* -------- MAIN -------- */
 
-/* -----FOOTER----- */
-.footer {
-    color: rgb(82, 81, 81);
+.main {
+    flex-direction: column;
+}
+
+
+.main-section {
+    margin: 0px 40px 40px 40px;
+    display: flex;
     flex-direction: row;
-    margin: 0px 20px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+}
+
+@media (max-width: 420px) {
+    .main-section {
+        margin: 0px 0px 20px 25px;
+        height: 140px;
+        border: none;
+        padding: 0px 5px 0px 5px; 
+        flex-wrap: wrap;
+        height: 320px;
+    }
+}
+
+.title-section {
+    margin-left: 18px;
+    margin-bottom: 18px;
+    width: 100%;
+}
+
+@media (max-width: 420px) {
+    .title-section {
+        font-size: 15px;
+        margin: 0px 0px 10px 0px;
+        width: 100%; /* display: block; no andaba ?*/
+    }
+}
+
+.main-article {
+    background-color: rgb(35, 35, 35);
+    width: 15vw;
+    height: 390px;
+    margin: 0px 10px;
+    border-radius: 20px;
+    padding: 13px;
+}
+
+@media (max-width: 420px) {
+    .main-article {
+        height: 140px;
+        width: 100px;
+        border-radius: 10px;
+        margin: 2px 3px;
+        padding: 0px;
+    }
+    .title-article, .ul-article {
+        display: none;
+    }
+}
+
+.poster-article {
+    background-size: cover;
+    width: 100%;
+    height: 290px;
+    border-radius: 10px;
+    align-self: center;
+}
+
+@media (max-width: 420px) {
+    .poster-article {
+        border-radius: 5px;
+        height: 140px;
+        width: 100%;
+    }
+}
+
+/* Foto de cada pelicula */
+#starwars {
+    background-image: url(../img/starwars.jpeg);
+}
+
+#antman {
+    background-image: url(../img/antman.jpeg);
+}
+
+#ironman {
+    background-image: url(../img/ironman.jpeg);
+}
+
+#deadpool {
+    background-image: url(../img/deadpool.jpeg);
+}
+
+#jurassic {
+    background-image: url(../img/jurassic.jpeg) ; 
+ }
+
+#peakyb {
+    background-image: url(../img/peakyblinders.jpg);
+}
+
+#gossip {
+    background-image: url(../img/gossip.jpg);
+}
+
+#stranger {
+    background-image: url(../img/stranger.jpg);
+}
+
+#breaking {
+    background-image: url(../img/breakingbad.jpeg);
+}
+
+#friends {
+    background-image: url(../img/friends.jpeg);
+}
+
+#pride {
+    background-image:url(../img/orgullo.jpeg);
+}
+
+#pride-fsize {
+    font-size: 23px;
+}
+
+#playlist {
+    background-image: url(../img/playlist.jpeg);
+}
+
+#tihau {
+    background-image: url(../img/tihau.jpeg);
+}
+
+#you {
+    background-image: url(../img/you.jpeg);
+}
+
+#riverdale {
+    background-image: url(../img/riverdale.jpeg);
+}
+
+.title-article {
+    margin-top: 5px;
+    margin-bottom: 3px;
+    font-size: 25px;
+}
+
+.ul-article {
+    list-style-type: none;
+    padding: 0px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+.detalles-ul {
+    font-size: 15px;
+    margin: 2px 0px;
+}
+
+
+/* -------- FOOTER -------- */
+.footer {
+    flex-direction: row;
     justify-content: space-between;
+    color: rgb(82, 81, 81);
+    margin: 0px 50px;
+    padding-bottom: 20px;
 }
 
 @media (max-width: 420px) {
     .footer {
         font-size: 10px;
         flex-direction: column;
+        margin: 0px 20px 0px 20px;
     }
     .name {
         margin-top: 0px;
@@ -131,6 +297,7 @@ body {
 .ft-margin{
     margin-top: 15px;
 }
+
 
 .footer-single {
     color: rgb(82, 81, 81);
