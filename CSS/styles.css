@@ -385,3 +385,50 @@ body {
         margin-top: 10px;
         }
 }
+
+
+
+/*--- Página de Genero ---*/
+#titulo{
+    align-self: flex-start;
+}
+.padre{
+    display: flex;
+    justify-content:center;
+}
+
+.genero {
+    list-style: none;
+}
+.listado-gen{
+    flex-direction: column;
+    background-color: rgba(243, 11, 11, 0.173);
+    padding: 10px 150px;
+}
+.tips{
+    padding-left: 0px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 0px;
+}
+.columna{
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+}
+.fila{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    width: 100vw;
+}
+@media (max-width: 420px ) {
+    .listado-gen {
+        padding:0px 0px;
+    }
+    .fila{
+        flex-direction: column;
+    }
+    
+}
