@@ -27,8 +27,8 @@
 
         <section class="flex nav-right">
             <div class="sbar"> <!-- div? -->
-                <form action="results.html" method="get">
-                    <input type="text" placeholder=" Buscar" id="buscar" name="buscar" value=""> <!-- id? -->
+                <form action="busqueda.html" method="get">
+                    <input type="text" placeholder=" Buscar" id="buscar" name="buscar" value="">
                     <button type="submit" class="button">-</button>
                 </form>
             </div>
@@ -39,27 +39,29 @@
             </div>
         </section>
     </header>
+    
     <main class="flex pelicula">
         <section class="flex section-pelicula">
             <img class="imagen-pelicula" src="./img/peliculafoto.jpg" alt="pelicula">
             <h1 class="text">ORGULLO Y PREJUICIO</h1>
-            <ul class=" flex icons">
-                <li><i class="awesome fa-solid fa-play"></i></li>
-                <li><i class="awesome fa-regular fa-heart"></i></li>
-                <li><i class="awesome fa-regular fa-star"></i></li>
+            <ul class="flex icons">
+                <li><a href="" class="nostyle"><i class="awesome fa-solid fa-play"></i></a></li>
+                <li><a href="" class="nostyle"><i class="awesome fa-regular fa-heart"></i></a></li>
+                <li><a href="" class="nostyle"><i class="awesome fa-regular fa-star"></i></a></li>
             </ul>
             <p class="text info">2005 2h 6min</p>
-            <p class="text info"> Género: Romance</p>
+            <p class="text info"> Género: <a href="./detalle-generos.html" class="nostyle">Romance</a></p>
             <p class="text">La obstinada Elizabeth Bennet y el orgullo Sr. Darcy intentan eludir sus sentimientos en
                 esta adaptacion de Jane Austen.</p>
         </section>
     </main>
+
     <footer class="flex footer">
         <section class="ft-margin">
             <ul class="opciones">
                 <li class="footer-li"><a class="nostyle footer-single" href="">Centro de ayuda</a></li>
                 <li class="footer-li"><a class="nostyle footer-single" href="">Privacidad</a></li>
-                <li class="footer-li"><a class="nostyle footer-single" href="">Preferencia de cookies</li></a>
+                <li class="footer-li"><a class="nostyle footer-single" href="">Preferencia de cookies</a></li>
             </ul>
         </section>
 
