@@ -73,7 +73,7 @@ body {
 }
 
 
-.main-section {
+.main-section, .serie-section, .titulo-section {
     margin: 0px 40px 40px 40px;
     display: flex;
     flex-direction: row;
