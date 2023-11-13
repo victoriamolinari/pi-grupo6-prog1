@@ -219,7 +219,7 @@ body {
 }
 
 
-.article-gen {
+.article-serie, .article-movie {
     flex-direction: column;
     margin-right: 180px;
 }
@@ -283,7 +283,7 @@ body {
     }
 
     /* --- MAIN --- */
-    .main-section {
+    .main-section, .main-busqueda {
         margin: 0px 0px 50px 25px;
         border: none;
         padding: 0px 5px 0px 5px;
