@@ -114,73 +114,6 @@ body {
 }
 
 
-/* Foto de cada pelicula */
-#starwars {
-    background-image: url(../img/starwars.jpeg);
-}
-
-#antman {
-    background-image: url(../img/antman.jpeg);
-}
-
-#ironman {
-    background-image: url(../img/ironman.jpeg);
-}
-
-#deadpool {
-    background-image: url(../img/deadpool.jpeg);
-}
-
-#jurassic {
-    background-image: url(../img/jurassic.jpeg);
-}
-
-#peakyb {
-    background-image: url(../img/peakyblinders.jpg);
-}
-
-#gossip {
-    background-image: url(../img/gossip.jpg);
-}
-
-#stranger {
-    background-image: url(../img/stranger.jpg);
-}
-
-#breaking {
-    background-image: url(../img/breakingbad.jpeg);
-}
-
-#friends {
-    background-image: url(../img/friends.jpeg);
-}
-
-#pride {
-    background-image: url(../img/orgullo.jpeg);
-}
-
-#pride-fsize {
-    font-size: 24px;
-}
-
-
-#playlist {
-    background-image: url(../img/playlist.jpeg);
-}
-
-#tihau {
-    background-image: url(../img/tihau.jpeg);
-}
-
-#you {
-    background-image: url(../img/you.jpeg);
-}
-
-#riverdale {
-    background-image: url(../img/riverdale.jpeg);
-}
-
-
 .ul-article {
     list-style-type: none;
     padding: 0px;
@@ -388,7 +321,7 @@ body {
 
     .poster-article {
         border-radius: 5px;
-        height: 140px;
+        min-height: 45vh;
         width: 100%;
     }
 

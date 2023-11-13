@@ -1,8 +1,8 @@
 let peliculas = document.querySelector('.main-section')
-let serie= document.querySelector('.serie-section')
-let title= document.querySelector('.titulo-section')
+let serie = document.querySelector('.serie-section')
+let title = document.querySelector('.titulo-section')
 
-// traje el api
+// Conexión con las APIs
 
 const options2 = {
     method: 'GET',
@@ -35,9 +35,9 @@ fetch('https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1&api_
         return data;
     })
         
-    .catch(function(err) {
-        console.log(err);
-        return err;
+    .catch(function(error) {
+        console.log(error);
+        return error;
     });
 
 
