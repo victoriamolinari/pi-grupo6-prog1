@@ -7,16 +7,22 @@ fetch(`https://api.themoviedb.org/3/search/movie?api_key=33e10f642f640258287c658
         return response.json();
     })
     .then(function (data) {
-        console.log(data);
 
         let busquedapeliculas = data.results;
         let mainbusqueda = document.querySelector('.main-busqueda');
 
         let resultados = "";
 
-        for (let i = 0; i < busquedapeliculas.length; i++) {
-            if (resultados != null && busquedapeliculas[i].poster_path != null) {
-                resultados += `<article class="main-article">
+
+        if (busquedapeliculas.length === 0) {
+            let noexiste = document.querySelector('.title-section');
+            noexiste.innerText = `No hay resultados para tu busqueda: ${busqueda}`;
+
+        } else {
+            // resultados.innerText = `Resultados para tu busqueda: ${busqueda}`
+            for (let i = 0; i < busquedapeliculas.length; i++) {
+                if (resultados != null && busquedapeliculas[i].poster_path != null) {
+                    resultados += `<article class="main-article">
                 <a href="./detalle-peliculas.html">
                 <img class="poster-article" src="https://image.tmdb.org/t/p/w500/${busquedapeliculas[i].poster_path}">
                 </a>
@@ -25,10 +31,12 @@ fetch(`https://api.themoviedb.org/3/search/movie?api_key=33e10f642f640258287c658
                     <li class="detalles-ul"> ${data.results[i].release_date}</li>
                 </ul>
             </article>`
+                }
             }
-        }
-        mainbusqueda.innerHTML += resultados;
 
+            mainbusqueda.innerHTML += resultados;
+
+        }
         return data;
     })
 
