@@ -15,6 +15,7 @@ body {
 /* propiedades flex generales */
 .flex {
     display: flex;
+    flex-wrap: wrap;
 }
 
 /* -------- BARRA DE NAVEGACION -------- */
@@ -72,8 +73,10 @@ body {
     max-width: 3155px;
 }
 
-
-.main-section, .serie-section, .titulo-section {
+.main-section,
+.serie-section,
+.titulo-section,
+.main-busqueda {
     margin: 0px 40px 40px 40px;
     display: flex;
     flex-direction: row;
@@ -107,7 +110,7 @@ body {
 
 .poster-article {
     background-size: cover;
-    width: 100%;
+    width: 15vw;
     height: 40vh;
     border-radius: 10px;
     align-self: center;
@@ -219,7 +222,8 @@ body {
 }
 
 
-.article-serie, .article-movie {
+.article-serie,
+.article-movie {
     flex-direction: column;
     margin-right: 180px;
 }
@@ -283,12 +287,6 @@ body {
     }
 
     /* --- MAIN --- */
-    .main-section, .main-busqueda {
-        margin: 0px 0px 50px 25px;
-        border: none;
-        padding: 0px 5px 0px 5px;
-        flex-wrap: wrap;
-    }
 
     #main-sectionmq {
         min-height: 500px;

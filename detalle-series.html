@@ -26,7 +26,7 @@
         </section>
 
         <section class="flex nav-right">
-            <div class="sbar"> <!-- div? -->
+            <div class="sbar">
                 <form action="busqueda.html" method="get">
                     <input type="text" placeholder=" Buscar" id="buscar" name="buscar" value="">
                     <button type="submit" class="button">-</button>
@@ -42,17 +42,16 @@
 
     <main class="flex serie">
         <section class="flex section-serie">
-            <img class="imagen-serie" src="./img/un-cuento-perfecto.jpg" alt="serie">
-            <h1 class="text">UN CUENTO PERFECTO</h1>
+            <img class="imagen-serie" src="" alt="serie">
+            <h1 class="text"></h1>
             <ul class="flex icons">
                 <li><i class="awesome fa-solid fa-play"></i></li>
                 <li><i class="awesome fa-regular fa-heart"></i></li>
                 <li><i class="awesome fa-regular fa-star"></i></li>
             </ul>
-            <p class="text info">2023 Miniserie</p>
-            <p class="text info"> Género: <a href="./detalle-generos.html" class="nostyle">Series basadas en libros</a></p>
-            <p class="text">Margot huye de su propia boda y se siente a la deriva. Lo que no sabe es que David y su
-                encantador caos pueden ayudarla a encontrar el camino</p>
+            <p class="text info"></p>
+            <p class="text info"><a href="./detalle-generos.html?id=${data.genres[0].id}" class="nostyle"></a></p>
+            <p class="text"></p>
         </section>
     </main>
 
@@ -70,6 +69,8 @@
         </section>
 
     </footer>
+
+    <script src="./js/destalle-series.js"></script>
 </body>
 
 </html>

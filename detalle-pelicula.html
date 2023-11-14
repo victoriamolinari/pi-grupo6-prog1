@@ -26,7 +26,7 @@
         </section>
 
         <section class="flex nav-right">
-            <div class="sbar"> <!-- div? -->
+            <div class="sbar">
                 <form action="busqueda.html" method="get">
                     <input type="text" placeholder=" Buscar" id="buscar" name="buscar" value="">
                     <button type="submit" class="button">-</button>
@@ -39,20 +39,21 @@
             </div>
         </section>
     </header>
-    
+
     <main class="flex pelicula">
         <section class="flex section-pelicula">
-            <img class="imagen-pelicula" src="" alt="">
+            <img class="imagen-pelicula flex" src="" alt="">
             <h1 class="text"></h1>
-            <!-- <ul class="flex icons">
+
+            <p class="text info"></p>
+            <p class="text info"><a href="./detalle-generos.html?id=${data.genres[0].id}" class="nostyle"></p>
+            <p class="text"></p>
+
+            <ul class="flex icons">
                 <li><a href="" class="nostyle"><i class="awesome fa-solid fa-play"></i></a></li>
                 <li><a href="" class="nostyle"><i class="awesome fa-regular fa-heart"></i></a></li>
                 <li><a href="" class="nostyle"><i class="awesome fa-regular fa-star"></i></a></li>
-            </ul> -->
-            <!-- <p class="text info">2005 2h 6min</p>
-            <p class="text info"> Género: <a href="./detalle-generos.html" class="nostyle">Romance</a></p>
-            <p class="text">La obstinada Elizabeth Bennet y el orgullo Sr. Darcy intentan eludir sus sentimientos en
-                esta adaptacion de Jane Austen.</p> -->
+            </ul>
         </section>
     </main>
 
@@ -74,4 +75,5 @@
     <script src="./js/detalle-pelicula.js"></script>
 
 </body>
+
 </html>

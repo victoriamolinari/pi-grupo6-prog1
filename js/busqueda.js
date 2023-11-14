@@ -1,24 +1,21 @@
-let qs = location.search; 
+let qs = location.search;
 let qsObj = new URLSearchParams(qs);
-let busqueda = qsObj.get("buscar")
+let busqueda = qsObj.get("buscar");
 
+fetch(`https://api.themoviedb.org/3/search/movie?api_key=33e10f642f640258287c658cad162391&query=${busqueda}`)
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (data) {
+        console.log(data);
 
-let endpoint = `https://api.themoviedb.org/3/search/movie?api_key=33e10f642f640258287c658cad162391&query=${busqueda}`
+        let busquedapeliculas = data.results;
+        let mainbusqueda = document.querySelector('.main-busqueda');
 
-fetch(endpoint)
-.then(function (response) {
-    return response.json();
-})
-.then(function (data) {
-    console.log(data);
+        let resultados = "";
 
-    let busquedapeliculas = data.results;
-    let mainbusqueda= document.querySelector('.main-busqueda');
-
-    let resultados = "";
-  
-    for(let i=0; i<busquedapeliculas.length; i++){
-        if(resultados != 'null'); //no me funciona y no me quita las peliculas sin foto
+        for (let i = 0; i < busquedapeliculas.length; i++) {
+            if (resultados != null && busquedapeliculas[i].poster_path != null) {
                 resultados += `<article class="main-article">
                 <a href="./detalle-peliculas.html">
                 <img class="poster-article" src="https://image.tmdb.org/t/p/w500/${busquedapeliculas[i].poster_path}">
@@ -29,16 +26,13 @@ fetch(endpoint)
                 </ul>
             </article>`
             }
+        }
+        mainbusqueda.innerHTML += resultados;
 
+        return data;
+    })
 
-   mainbusqueda.innerHTML += resultados;
-   
-
-    return data;
-})
-
-.catch(function (error) {
-    console.log(error);
-    return error;
-});
-
+    .catch(function (error) {
+        console.log(error);
+        return error;
+    });
