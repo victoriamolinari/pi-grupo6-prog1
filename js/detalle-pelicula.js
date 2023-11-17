@@ -4,9 +4,13 @@ let id = qsObj.get("id");
 
 // Recupero los elementos del DOM
 const img = document.querySelector(".imagen-pelicula");
-const text = document.querySelector(".text");
-const info = document.querySelectorAll(".info")
-const genero = document.querySelector(".nostyle");
+const titulo = document.querySelector(".titulo"); 
+const genero = document.querySelector(".genero");
+const rating = document.querySelector(".rating");
+const estreno = document.querySelector(".estreno");
+const duracion = document.querySelector(".duracion");
+const sinopsis = document.querySelector(".sinopsis");
+
 
 fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=33e10f642f640258287c658cad162391`)
 
@@ -16,14 +20,19 @@ fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=33e10f642f640258287c658c
 
     .then(function (data) {
 
-        console.log(data.genres)
+
         img.src = `https://image.tmdb.org/t/p/w500/${data.poster_path}`;
-        text.innerText = data.title;
+        titulo.innerText = data.title;
+
+
         for (var i = 0; i < data.genres.length; i++) {
-            info[0].innerHTML += `<a href="./detalle-generos.html?id=${data.genres[i].id}" class="nostyle">${data.genres[i].name} </a>`
+            genero.innerText += " " + data.genres[i].name + " "
         }
 
-        info[1].innerText = data.overview;
+        rating.innerText = "Rating: " + data.vote_average;
+        estreno.innerText = "Estreno: " + data.release_date;
+        duracion.innerText = "Duracion: " + data.runtime + " min";
+        sinopsis.innerText = "Sinopsis: " + data.overview;
 
         return data;
     })
@@ -32,7 +41,3 @@ fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=33e10f642f640258287c658c
         console.log(error);
         return error;
     });
-
-
-
-// miso nombre de como lo recupero en el indez y en este

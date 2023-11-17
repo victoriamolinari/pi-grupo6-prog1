@@ -43,27 +43,30 @@
     <main class="flex pelicula">
         <section class="flex section-pelicula">
             <img class="imagen-pelicula flex" src="" alt="">
-            <h1 class="text"></h1>
+            <h1 class="text titulo"></h1>
 
-            <p class="text info"></p>
-            <p class="text info"><a href="./detalle-generos.html?id=${data.genres[0].id}" class="nostyle"></p>
-            <p class="text"></p>
+            <p class="text info">Género/s: <a href="./detalle-generos.html?id=${data.genres[0].id}" class="nostyle genero"></a></p>
+            <p class="text rating"></p>
+            <p class="text estreno"></p>
+            <p class="text duracion"></p>
+            <p class="text sinopsis"></p>
+
+
 
             <ul class="flex icons">
                 <li><a href="" class="nostyle"><i class="awesome fa-solid fa-play"></i></a></li>
                 <li><a href="" class="nostyle"><i class="awesome fa-regular fa-heart"></i></a></li>
                 <li><a href="" class="nostyle"><i class="awesome fa-regular fa-star"></i></a></li>
             </ul>
+
+            <button type="button" class="recomendaciones">Ver recomendaciones</button>
+
         </section>
     </main>
 
     <footer class="flex footer">
-        <section class="ft-margin">
-            <ul class="opciones">
-                <li class="footer-li"><a class="nostyle footer-single" href="">Centro de ayuda</a></li>
-                <li class="footer-li"><a class="nostyle footer-single" href="">Privacidad</a></li>
-                <li class="footer-li"><a class="nostyle footer-single" href="">Preferencia de cookies</a></li>
-            </ul>
+        <section class="ft-margin flex">
+            <a href="https://www.themoviedb.org"><img src="./img/tmdb.png" class="img-footer"></a>
         </section>
 
         <section class="ft-margin">
@@ -71,9 +74,9 @@
         </section>
 
     </footer>
-
     <script src="./js/detalle-pelicula.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.17.9/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.17.9/dist/js/uikit-icons.min.js"></script>
 </body>
 
 </html>

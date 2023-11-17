@@ -1,8 +1,8 @@
-let peliculas = document.querySelector('.main-section')
-let serie = document.querySelector('.serie-section')
-let title = document.querySelector('.titulo-section')
+let peliculas = document.querySelector('.main-section');
+let serie = document.querySelector('.serie-section');
+let title = document.querySelector('.titulo-section');
 
-// Conexión con las APIs
+// Conexión con las APIs?
 
 const options2 = {
     method: 'GET',
@@ -18,6 +18,8 @@ fetch('https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1&api_
     })
 
     .then(function (data) {
+        console.log(data.results)
+
         for (let i = 0; i < 5; i++) {
             peliculas.innerHTML += ` <article class="main-article" id="${data.results[i].id}">
                                     <a href="./detalle-pelicula.html?id=${data.results[i].id}">
@@ -28,6 +30,8 @@ fetch('https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1&api_
                                     <ul class="ul-article">
                                         <li class="detalles-ul"> ${data.results[i].release_date}</li>
                                     </ul>
+
+                                    <span href="" uk-icon="heart" class="heart"></span>
 
                                 </article>`
         }
@@ -56,6 +60,8 @@ fetch('https://api.themoviedb.org/3/tv/airing_today?language=en-US&page=1&api_ke
     })
 
     .then(function (data) {
+        console.log(data.results)
+
         for (let i = 0; i < 5; i++) {
             serie.innerHTML += ` <article class="main-article" id="${data.results[i].id}">
                                     <a href="./detalle-series.html?id=${data.results[i].id}">                                        
@@ -68,8 +74,12 @@ fetch('https://api.themoviedb.org/3/tv/airing_today?language=en-US&page=1&api_ke
 
                                     </ul>
 
+                                    <span href="" uk-icon="heart" class="heart"></span>
+
+
                                 </article>`
         }
+
         return data;
     })
 
@@ -93,7 +103,8 @@ fetch('https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1&api_ke
     })
 
     .then(function (data) {
-        console.log(data)
+        console.log(data.results)
+        
         for (let i = 0; i < 5; i++) {
             title.innerHTML += ` <article class="main-article" id="${data.results[i].id}">
                 <a href="./detalle-pelicula.html?id=${data.results[i].id}">                                        
@@ -105,11 +116,11 @@ fetch('https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1&api_ke
                     <li class="detalles-ul"> ${data.results[i].release_date}</li>
                 </ul>
 
-                <a href="" uk-icon="heart" class="heart"></a>
-            
+                <span href="" uk-icon="heart" class="heart"></span>
 
             </article>`
         }
+
         return data;
     })
 
@@ -119,8 +130,12 @@ fetch('https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1&api_ke
     });
 
 
+    // let heart = document.querySelector(".heart");
 
-    heart.addEventListener('click', function() {
-        console.log(this.value);
-        heart.style.backgroundColor = "red";
-    });
+    //     heart.addEventListener("click", function (e) {
+    //         if (heart.style.backgroundColor == "red") {
+    //             heart.backgroundColor = "transparent";
+    //         } else {
+    //             heart.style.backgroundColor = "red"
+    //         }
+    //     });
