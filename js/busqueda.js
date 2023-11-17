@@ -1,6 +1,11 @@
 let qs = location.search;
 let qsObj = new URLSearchParams(qs);
 let busqueda = qsObj.get("buscar");
+let pagina= 1;
+let loader= document.querySelector('.loader');
+
+
+loader.style.display= 'block';
 
 fetch(`https://api.themoviedb.org/3/search/movie?api_key=33e10f642f640258287c658cad162391&query=${busqueda}`)
     .then(function (response) {
@@ -20,6 +25,9 @@ fetch(`https://api.themoviedb.org/3/search/movie?api_key=33e10f642f640258287c658
 
         } else {
             // resultados.innerText = `Resultados para tu busqueda: ${busqueda}`
+
+                resultados.innerText = `Resultados para tu busqueda: ${busqueda}`;
+
             for (let i = 0; i < busquedapeliculas.length; i++) {
                 if (resultados != null && busquedapeliculas[i].poster_path != null) {
                     resultados += `<article class="main-article">
@@ -35,6 +43,7 @@ fetch(`https://api.themoviedb.org/3/search/movie?api_key=33e10f642f640258287c658
             }
 
             mainbusqueda.innerHTML += resultados;
+            loader.style.display= 'none';
 
         }
         return data;

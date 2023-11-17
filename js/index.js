@@ -105,6 +105,9 @@ fetch('https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1&api_ke
                     <li class="detalles-ul"> ${data.results[i].release_date}</li>
                 </ul>
 
+                <a href="" uk-icon="heart" class="heart"></a>
+            
+
             </article>`
         }
         return data;
@@ -113,4 +116,11 @@ fetch('https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1&api_ke
     .catch(function (err) {
         console.log(err);
         return err;
+    });
+
+
+
+    heart.addEventListener('click', function() {
+        console.log(this.value);
+        heart.style.backgroundColor = "red";
     });
